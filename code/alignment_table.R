@@ -34,7 +34,6 @@ dat <-
     )
   )
 
-
 align_gt <-
   dat %>%
   gt() %>%
@@ -108,6 +107,6 @@ align_gt <-
   cols_width(everything() ~ px(310))
 
 align_gt
-# gtsave(align_gt, "alignment_table.png")
+
 gtsave(align_gt, here::here("figs", "alignment_table.html"))
 gtsave(align_gt, here::here("figs", "alignment_table.png"))
