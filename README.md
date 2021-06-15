@@ -3,4 +3,4 @@
 
 # alignment-chart
 
-<img src='figs/alignment_table.png' align="center" />
+<img src='figs/alignment_chart.png' align="center" />
