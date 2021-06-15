@@ -12,7 +12,7 @@ dat <-
       "LAWFUL TIDY",
       "mtcars %>%<br />select(contains(\"p\")) %>% names()",
       "LAWFUL NEUTRAL",
-      "grep(\"p\", names(mtcars), value = TRUE)",
+      "grep(\"p\", names(mtcars),<br>value = TRUE)",
       "LAWFUL BASE",
       "names(mtcars) |><br />(\\\\(.) grep(\"p\", ., value = TRUE))()"
     ),
@@ -20,7 +20,7 @@ dat <-
       "NEUTRAL TIDY",
       "mtcars %>%<br />select(contains(\"p\")) %>% names",
       "TRUE NEUTRAL",
-      "names(mtcars) %>%<br />grep(\"p\", ., value = TRUE)",
+      "names(mtcars)[grep(\"p\",<br>names(mtcars))]",
       "NEUTRAL BASE",
       "names(mtcars) |><br>(\\\\(.) .[grep(\"p\", .)])()"
     ),
@@ -28,7 +28,7 @@ dat <-
       "CHAOTIC TIDY",
       "mtcars %>%<br />select(grep(\"p\", names(.))) %>% names",
       "CHAOTIC NEUTRAL",
-      "names(mtcars)[grep(\"p\", names(mtcars))]",
+      "mtcars %>%<br>names %>% grep(\"p\", ., value = TRUE)",
       "CHAOTIC BASE",
       "names(mtcars) |><br />(\\\\(.) \\`[\\`(., grep(\"p\", .)))()"
     )
@@ -64,7 +64,7 @@ align_gt <-
     style = list(
       cell_text(
         font = "Anton",
-        size = 20,
+        size = 26,
         weight = "bold"
       ),
       cell_borders(
