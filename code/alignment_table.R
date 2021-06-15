@@ -2,7 +2,7 @@ library(magrittr)
 library(gt)
 
 # install homebrew: https://brew.sh/
-# brew tap homebrew/cask-fonts 
+# brew tap homebrew/cask-fonts
 # brew install font-inconsolata
 # brew install font-anton
 
@@ -39,16 +39,20 @@ align_gt <-
   gt() %>%
   fmt_markdown(columns = everything()) %>%
   cols_align(align = "center") %>%
-  tab_options(column_labels.hidden = TRUE,
-              data_row.padding = px(10),
-              table_body.border.bottom.style = "dashed",
-              table_body.border.bottom.width = px(3),
-              table_body.border.bottom.color = "#000000") %>%
+  tab_options(
+    column_labels.hidden = TRUE,
+    data_row.padding = px(10),
+    table_body.border.bottom.style = "dashed",
+    table_body.border.bottom.width = px(3),
+    table_body.border.bottom.color = "#000000"
+  ) %>%
   tab_style(
     style = list(
       cell_fill(color = "lightgrey"),
-      cell_text(font = "Inconsolata",
-                size = 8),
+      cell_text(
+        font = "Inconsolata",
+        size = 8
+      ),
       cell_borders(
         sides = "all",
         color = "#000000",
@@ -56,8 +60,10 @@ align_gt <-
         weight = px(3)
       )
     ),
-    locations = cells_body(columns = c(1:3),
-                           rows = c(2, 4, 6))
+    locations = cells_body(
+      columns = c(1:3),
+      rows = c(2, 4, 6)
+    )
   ) %>%
   tab_style(
     style = list(
@@ -91,19 +97,25 @@ align_gt <-
         weight = px(3)
       )
     ),
-    locations = cells_body(columns = c(1:3),
-                           rows = c(1, 3, 5))
-  ) %>%
-  tab_style(style = list(
-    cell_borders(
-      sides = "top",
-      color = "#FFFFFF",
-      style = "solid",
-      weight = px(3)
+    locations = cells_body(
+      columns = c(1:3),
+      rows = c(1, 3, 5)
     )
-  ),
-  locations = cells_body(columns = c(1:3),
-                         rows = 1)) %>%
+  ) %>%
+  tab_style(
+    style = list(
+      cell_borders(
+        sides = "top",
+        color = "#FFFFFF",
+        style = "solid",
+        weight = px(3)
+      )
+    ),
+    locations = cells_body(
+      columns = c(1:3),
+      rows = 1
+    )
+  ) %>%
   cols_width(everything() ~ px(310))
 
 align_gt
