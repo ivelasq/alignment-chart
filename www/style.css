@@ -1,0 +1,8 @@
+@import url('//fonts.googleapis.com/css?family=Inconsolata|Anton:400,700');
+
+h1 {
+  font-family: "Anton";
+  font-size: 52px;
+  line-height: 1.8;
+  padding: 18px;
+}
