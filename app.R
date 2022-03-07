@@ -100,7 +100,7 @@ server <- function(input, output) {
             gtTabReact() %>%
                 mutate_at(vars(col_1),
                           function(x) replace(x,
-                                              row_number(x) == 14,
+                                              row_number(x) == 17,
                                               input$lawfulGood))
             
         }
@@ -108,16 +108,16 @@ server <- function(input, output) {
             gtTabReact() %>%
                 mutate_at(vars(col_1),
                           function(x) replace(x,
-                                              row_number(x) == 2,
+                                              row_number(x) == 5,
                                               input$lawfulNeutral))
             
         }
-        if (!is.null(input$lawfulNeutral)) {
+        if (!is.null(input$lawfulEvil)) {
             gtTabReact() %>%
                 mutate_at(vars(col_1),
                           function(x) replace(x,
-                                              row_number(x) == 2,
-                                              input$lawfulNeutral))
+                                              row_number(x) == 3,
+                                              input$lawfulEvil))
             
         }
     })
